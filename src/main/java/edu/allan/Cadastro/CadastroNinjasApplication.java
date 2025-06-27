@@ -1,4 +1,4 @@
-package edu.allan.CadastroNinjas;
+package edu.allan.Cadastro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,10 @@
-package edu.allan.CadastroNinjas.repository;
+package edu.allan.Cadastro.Ninjas.repository;
 
 import org.springframework.stereotype.Repository;
+
+import edu.allan.Cadastro.Ninjas.models.NinjaModel;
+
 import org.springframework.data.jpa.repository.JpaRepository;
-import edu.allan.CadastroNinjas.models.NinjaModel;
 
 @Repository
 public interface NinjaRepository extends JpaRepository <NinjaModel, Long>{

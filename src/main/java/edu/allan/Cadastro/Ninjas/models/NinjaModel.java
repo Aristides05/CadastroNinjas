@@ -1,4 +1,4 @@
-package edu.allan.CadastroNinjas.models;
+package edu.allan.Cadastro.Ninjas.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

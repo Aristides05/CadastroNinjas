@@ -1,9 +1,11 @@
-package edu.allan.CadastroNinjas.service;
+package edu.allan.Cadastro.Ninjas.service;
 
 import org.springframework.stereotype.Service;
 
-import edu.allan.CadastroNinjas.models.NinjaModel;
-import edu.allan.CadastroNinjas.repository.NinjaRepository;
+import edu.allan.Cadastro.Ninjas.models.NinjaModel;
+import edu.allan.Cadastro.Ninjas.repository.NinjaRepository;
+
+import java.util.List;
 
 @Service
 public class NinjaService {
@@ -15,8 +17,8 @@ public class NinjaService {
     }
 
     // Métodos que nosso modelo: NinjaModel irá utilizar
-    public void saveNinja(NinjaModel ninja) {
-        ninjaRepository.save(ninja);
+    public NinjaModel saveNinja(NinjaModel ninja) {
+        return ninjaRepository.save(ninja);
     }
 
     public void deleteNinja(Long id) {
@@ -27,12 +29,13 @@ public class NinjaService {
         ninjaRepository.deleteAll();
     }
 
-    public void findNinjaById(Long id) {
-        ninjaRepository.findById(id);
+    public NinjaModel findNinjaById(Long id) {
+        return ninjaRepository.findById(id)
+                .orElse(null);
     }
 
-    public void findAllNinjas() {
-        ninjaRepository.findAll();
+    public List<NinjaModel> findAllNinjas() {
+        return ninjaRepository.findAll();
     }
 
 }
