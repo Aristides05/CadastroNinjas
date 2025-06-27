@@ -1,2 +1,2 @@
 # CadastroNinjas
-Primeira API utilizando Spring
+API utilizando Spring
