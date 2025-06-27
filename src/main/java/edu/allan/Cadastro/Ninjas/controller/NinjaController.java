@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import edu.allan.Cadastro.Ninjas.models.NinjaModel;
 import edu.allan.Cadastro.Ninjas.service.NinjaService;
-
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.util.List;
 
 @RestController
@@ -56,4 +55,15 @@ public class NinjaController {
         public NinjaModel findNinjaById(@PathVariable Long id) {
             return ninjaService.findNinjaById(id);
         }
+
+        @DeleteMapping("/deletar/{id}")
+        public void deleteNinja(@PathVariable Long id) {
+            ninjaService.deleteNinja(id);
+        }
+
+        @DeleteMapping("/deletar-todos")
+        public void deleteAllNinjas() {
+            ninjaService.deleteAllNinjas();
+        }
+
 }
