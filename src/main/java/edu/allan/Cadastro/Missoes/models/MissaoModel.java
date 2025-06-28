@@ -1,4 +1,4 @@
-package edu.allan.Cadastro.Missoes;
+package edu.allan.Cadastro.Missoes.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

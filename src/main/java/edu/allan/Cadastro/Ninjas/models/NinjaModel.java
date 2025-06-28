@@ -23,5 +23,6 @@ public class NinjaModel {
     private String name; 
     private String village;
     private String rank;
+
 }
  
