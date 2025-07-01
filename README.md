@@ -4,8 +4,8 @@ Este projeto foi desenvolvido durante os primeiros estudos com Spring Boot, insp
 
 ## 🚀 Tecnologias utilizadas
 
-- [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="30" height="30"> Java](https://docs.oracle.com/en/java/) - Linguagem de programação utilizada
-- [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" width="30" height="30"> Spring Boot](https://spring.io/projects/spring-boot) - Framework utilizado
+- [Java](https://docs.oracle.com/en/java/) - Linguagem de programação utilizada
+- [Spring Boot](https://spring.io/projects/spring-boot) - Framework utilizado
 - [Spring Web](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#web)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [Banco de dados H2](https://www.h2database.com/)
