@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -64,6 +65,11 @@ public class MissaoController {
     @DeleteMapping("/deletar-todos")
     public void deleteAllMissions() {
         missaoService.deleteAllMissao();
-    }   
+    }
+
+    @PutMapping("/atualizar-status/{id}")
+    public MissaoModel updateStatusMissao(@PathVariable Long id, @RequestParam String status) {
+        return missaoService.updateStatusMissao(id, status);
+    }
 
 }
