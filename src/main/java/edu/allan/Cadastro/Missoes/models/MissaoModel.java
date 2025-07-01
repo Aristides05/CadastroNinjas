@@ -25,4 +25,11 @@ public class MissaoModel {
     private String rank;
     private String status; // "Pendente", "Em Andamento", "Conclu
 
+    public MissaoModel(String name, String description, String rank, String status) {
+        this.name = name;
+        this.description = description;
+        this.rank = rank;
+        this.status = status;
+    }
+
 }

@@ -23,47 +23,48 @@ public class NinjaController {
         this.ninjaService = ninjaService;
     }
 
-        @GetMapping
-        public String index() {
-            return "Bem vindo ao Cadastro de Ninjas!";
-            // listar os endpoints aqui
-        }
+    
+    @GetMapping
+    public String index() {
+        return "Bem vindo ao Cadastro de Ninjas!";
+        // listar os endpoints aqui
+    }
 
-        @PostMapping("/cadastrar")
-        public NinjaModel saveNinja(@RequestBody NinjaModel ninja) {
-            return ninjaService.saveNinja(ninja);
-        }
+    @PostMapping("/cadastrar")
+    public NinjaModel saveNinja(@RequestBody NinjaModel ninja) {
+        return ninjaService.saveNinja(ninja);
+    }
 
-        @PostMapping("/cadastrar-url")
-        public NinjaModel saveNinjaUrl(@RequestParam String name,
-                                       @RequestParam String rank,
-                                       @RequestParam String village) {
+    @PostMapping("/cadastrar-url")
+    public NinjaModel saveNinjaUrl(@RequestParam String name,
+            @RequestParam String rank,
+            @RequestParam String village) {
 
-            NinjaModel ninja = new NinjaModel();
-            ninja.setName(name);
-            ninja.setRank(rank);
-            ninja.setVillage(village);
-            return ninjaService.saveNinja(ninja);
-        }
+        NinjaModel ninja = new NinjaModel();
+        ninja.setName(name);
+        ninja.setRank(rank);
+        ninja.setVillage(village);
+        return ninjaService.saveNinja(ninja);
+    }
 
-        @GetMapping("/listar-todos")
-        public List<NinjaModel> listAllNinjas() {
-            return ninjaService.findAllNinjas();
-        }
+    @GetMapping("/listar-todos")
+    public List<NinjaModel> listAllNinjas() {
+        return ninjaService.findAllNinjas();
+    }
 
-        @GetMapping("/listar-id/{id}")
-        public NinjaModel findNinjaById(@PathVariable Long id) {
-            return ninjaService.findNinjaById(id);
-        }
+    @GetMapping("/listar-id/{id}")
+    public NinjaModel findNinjaById(@PathVariable Long id) {
+        return ninjaService.findNinjaById(id);
+    }
 
-        @DeleteMapping("/deletar/{id}")
-        public void deleteNinja(@PathVariable Long id) {
-            ninjaService.deleteNinja(id);
-        }
+    @DeleteMapping("/deletar/{id}")
+    public void deleteNinja(@PathVariable Long id) {
+        ninjaService.deleteNinja(id);
+    }
 
-        @DeleteMapping("/deletar-todos")
-        public void deleteAllNinjas() {
-            ninjaService.deleteAllNinjas();
-        }
+    @DeleteMapping("/deletar-todos")
+    public void deleteAllNinjas() {
+        ninjaService.deleteAllNinjas();
+    }
 
 }

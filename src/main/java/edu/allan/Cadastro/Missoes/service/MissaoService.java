@@ -38,4 +38,12 @@ public class MissaoService {
         return missaoRepository.findAll();
     }
 
+    public MissaoModel updateStatusMissao(Long id, String status) {
+        MissaoModel missao = missaoRepository.findById(id) 
+                .orElseThrow(() -> new RuntimeException("Missão não encontrada com o ID: " + id));
+        missao.setStatus(status);
+        return missaoRepository.save(missao);
+        
+    }
+
 }
